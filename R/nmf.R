@@ -1718,7 +1718,7 @@ function(x, rank, method
                     }
                     
                     # get best fit index
-                    mdev <- as.vector(sapply(res.runs, '[[', 'min.deviance'))
+                    mdev <- as.numeric(sapply(res.runs, '[[', 'min.deviance'))
 					idx <- which(mdev == min(mdev, na.rm=TRUE))
 					if( length(idx) == 0L )
 						ffstop("Unexpected error: no partial result seem to have been saved.")
